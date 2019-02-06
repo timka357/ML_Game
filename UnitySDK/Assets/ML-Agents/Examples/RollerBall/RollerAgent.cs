@@ -39,8 +39,8 @@ public class RollerAgent : Agent
     public override void AgentAction(float[] vectorAction, string textAction)
     {
         Vector3 ControlSignal = Vector3.zero;
-        ControlSignal[0] = vectorAction[0];
-        ControlSignal[1] = vectorAction[1];
+        ControlSignal.x = vectorAction[0];
+        ControlSignal.z = vectorAction[1];
         _rBody.AddForce(ControlSignal * speed);
 
         //rewards
@@ -56,8 +56,8 @@ public class RollerAgent : Agent
         {
             Done();
         }
+
+        Monitor.Log("Reward", GetReward());
     }
-
-
 
 }

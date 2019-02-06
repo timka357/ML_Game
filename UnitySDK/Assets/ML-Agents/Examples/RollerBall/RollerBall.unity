@@ -145,6 +145,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 007274758c804604ab4f0fd222260871, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brain: {fileID: 11400000, guid: f79b77bd54e64104b828260e08244d19, type: 2}
+  agentParameters:
+    agentCameras: []
+    maxStep: 0
+    resetOnDone: 1
+    onDemandDecision: 0
+    numberOfActionsBetweenDecisions: 10
+  Target: {fileID: 2122077231}
+  speed: 10
 --- !u!54 &922213702
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -426,6 +435,7 @@ MonoBehaviour:
   broadcastHub:
     broadcastingBrains:
     - {fileID: 11400000, guid: 6abd402230dd91546b3fa7b1ab8ea019, type: 2}
+    - {fileID: 11400000, guid: f79b77bd54e64104b828260e08244d19, type: 2}
     _brainsToControl: []
   maxSteps: 0
   trainingConfiguration:
@@ -549,7 +559,6 @@ GameObject:
   - component: {fileID: 2122077231}
   - component: {fileID: 2122077230}
   - component: {fileID: 2122077229}
-  - component: {fileID: 2122077228}
   m_Layer: 0
   m_Name: Target
   m_TagString: Untagged
@@ -557,19 +566,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &2122077228
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122077227}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2122077229
 MeshRenderer:
   m_ObjectHideFlags: 0
